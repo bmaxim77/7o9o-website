@@ -2,6 +2,8 @@
 
 Elegant, minimalist website for strategic financial services.
 
+Deployed at: https://7o9o.com
+
 ## Features
 
 - **Minimalist Design**: Clean, sophisticated aesthetic with dark color scheme
@@ -34,34 +36,4 @@ npm run preview
 
 ## Deployment
 
-This site is configured for Cloudflare Pages deployment via GitHub.
-
-1. Push changes to GitHub
-2. Cloudflare automatically builds and deploys
-3. Build command: `npm run build`
-4. Build output directory: `dist`
-
-## Structure
-
-```
-7o9o-website/
-├── src/
-│   ├── components/      # Reusable components
-│   ├── layouts/         # Page layouts
-│   └── pages/          # Routes (index.astro = homepage)
-├── public/             # Static assets
-└── astro.config.mjs    # Astro configuration
-```
-
-## Customization
-
-To update content:
-- **Hero section**: Edit `src/components/Hero.astro`
-- **About text**: Edit `src/components/About.astro`
-- **Services**: Edit `src/components/Services.astro`
-- **Contact email**: Edit `src/components/Contact.astro`
-- **Colors**: Modify CSS variables in `src/layouts/Layout.astro`
-
-## Contact
-
-For any updates or changes, contact through this Claude conversation.
+Automatically deploys to Cloudflare Pages on push to main branch.
