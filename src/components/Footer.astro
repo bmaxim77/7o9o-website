@@ -4,13 +4,21 @@ const currentYear = new Date().getFullYear();
 
 <footer class="footer">
   <div class="container">
+    <div class="footer-content">
+      <div class="address">
+        <p class="company-name">7o9o</p>
+        <p>1309 Coffeen Avenue STE 1200</p>
+        <p>Sheridan, Wyoming 82801</p>
+        <p>USA</p>
+      </div>
+    </div>
     <p class="copyright">&copy; {currentYear} 7o9o. All rights reserved.</p>
   </div>
 </footer>
 
 <style>
   .footer {
-    padding: 3rem 2rem;
+    padding: 4rem 2rem 3rem;
     background: var(--color-primary);
     border-top: 1px solid rgba(201, 169, 97, 0.1);
   }
@@ -18,22 +26,64 @@ const currentYear = new Date().getFullYear();
   .container {
     max-width: 1200px;
     margin: 0 auto;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+  
+  .address {
     text-align: center;
+  }
+  
+  .company-name {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.15rem;
+  }
+  
+  .address p {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    font-weight: 300;
+    line-height: 1.8;
+    margin: 0.25rem 0;
   }
   
   .copyright {
     font-size: 0.9rem;
     color: var(--color-text-muted);
     font-weight: 300;
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(201, 169, 97, 0.1);
   }
   
   @media (max-width: 768px) {
     .footer {
-      padding: 2rem 1.5rem;
+      padding: 3rem 1.5rem 2rem;
+    }
+    
+    .footer-content {
+      margin-bottom: 2rem;
+    }
+    
+    .company-name {
+      font-size: 1.3rem;
+    }
+    
+    .address p {
+      font-size: 0.9rem;
     }
     
     .copyright {
       font-size: 0.85rem;
+      padding-top: 1.5rem;
     }
   }
 </style>
