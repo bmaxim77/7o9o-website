@@ -6,10 +6,11 @@ const currentYear = new Date().getFullYear();
   <div class="container">
     <div class="footer-content">
       <div class="address">
-        <p class="company-name">7o9o</p>
+        <p class="company-name">7o9o LLC</p>
         <p>1309 Coffeen Avenue STE 1200</p>
         <p>Sheridan, Wyoming 82801</p>
         <p>USA</p>
+        <p class="phone">+1 (307) 487-7774</p>
       </div>
     </div>
     <p class="copyright">&copy; {currentYear} 7o9o. All rights reserved.</p>
@@ -53,6 +54,11 @@ const currentYear = new Date().getFullYear();
     font-weight: 300;
     line-height: 1.8;
     margin: 0.25rem 0;
+  }
+  
+  .phone {
+    margin-top: 1rem !important;
+    color: var(--color-text) !important;
   }
   
   .copyright {
