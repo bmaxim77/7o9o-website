@@ -1,0 +1,82 @@
+---
+---
+
+<section class="hero">
+  <div class="container">
+    <div class="logo">
+      <span class="logo-text">7o9o</span>
+    </div>
+    <h1 class="tagline">Strategic Financial Services</h1>
+    <p class="subtitle">Specialized solutions for discerning clients</p>
+  </div>
+</section>
+
+<style>
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    margin-bottom: 3rem;
+  }
+  
+  .logo-text {
+    font-family: var(--font-serif);
+    font-size: 5rem;
+    font-weight: 300;
+    letter-spacing: 0.3rem;
+    color: var(--color-accent);
+    display: inline-block;
+    position: relative;
+  }
+  
+  .logo-text::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 1px;
+    background: var(--color-accent);
+  }
+  
+  .tagline {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+    font-weight: 300;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    font-weight: 300;
+  }
+  
+  @media (max-width: 768px) {
+    .logo-text {
+      font-size: 3.5rem;
+      letter-spacing: 0.2rem;
+    }
+    
+    .tagline {
+      font-size: 1.8rem;
+    }
+    
+    .subtitle {
+      font-size: 1rem;
+    }
+  }
+</style>

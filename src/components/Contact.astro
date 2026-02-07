@@ -1,0 +1,82 @@
+---
+---
+
+<section class="contact">
+  <div class="container">
+    <h2>Contact</h2>
+    <div class="content">
+      <p class="availability">Services available by arrangement</p>
+      <a href="mailto:contact@7o9o.com" class="email">contact@7o9o.com</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact {
+    padding: 8rem 2rem;
+    background: var(--color-secondary);
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: var(--color-accent);
+    font-weight: 300;
+  }
+  
+  .availability {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+    font-weight: 300;
+  }
+  
+  .email {
+    font-size: 1.3rem;
+    color: var(--color-accent);
+    text-decoration: none;
+    font-family: var(--font-serif);
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .email::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--color-accent);
+    transition: width 0.3s ease;
+  }
+  
+  .email:hover::after {
+    width: 100%;
+  }
+  
+  .email:hover {
+    opacity: 0.8;
+  }
+  
+  @media (max-width: 768px) {
+    .contact {
+      padding: 5rem 1.5rem;
+    }
+    
+    h2 {
+      font-size: 2.2rem;
+    }
+    
+    .email {
+      font-size: 1.1rem;
+    }
+  }
+</style>

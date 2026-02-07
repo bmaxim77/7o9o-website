@@ -1,0 +1,106 @@
+---
+const services = [
+  {
+    title: "Financial Consulting",
+    description: "Strategic guidance for complex financial decisions and operational efficiency"
+  },
+  {
+    title: "Operational Support",
+    description: "Comprehensive administrative services and process optimization"
+  },
+  {
+    title: "Strategic Planning",
+    description: "Long-term financial strategy development and implementation support"
+  },
+  {
+    title: "Business Services",
+    description: "Specialized solutions tailored to unique organizational requirements"
+  }
+];
+---
+
+<section class="services">
+  <div class="container">
+    <h2>Services</h2>
+    <div class="services-grid">
+      {services.map((service) => (
+        <div class="service-card">
+          <h3>{service.title}</h3>
+          <p>{service.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .services {
+    padding: 8rem 2rem;
+    background: var(--color-primary);
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    color: var(--color-accent);
+    font-weight: 300;
+    text-align: center;
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+  }
+  
+  .service-card {
+    padding: 2.5rem;
+    background: rgba(45, 53, 72, 0.5);
+    border: 1px solid rgba(201, 169, 97, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .service-card:hover {
+    border-color: rgba(201, 169, 97, 0.3);
+    transform: translateY(-5px);
+  }
+  
+  .service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+    font-weight: 400;
+  }
+  
+  .service-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+    font-weight: 300;
+  }
+  
+  @media (max-width: 768px) {
+    .services {
+      padding: 5rem 1.5rem;
+    }
+    
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 3rem;
+    }
+    
+    .services-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    
+    .service-card {
+      padding: 2rem;
+    }
+  }
+</style>

@@ -1,0 +1,65 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Strategic Financial Services" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <slot />
+    
+    <style is:global>
+      :root {
+        --color-primary: #1a1f2e;
+        --color-secondary: #2d3548;
+        --color-accent: #c9a961;
+        --color-text: #e8e8e8;
+        --color-text-muted: #a0a0a0;
+        --font-serif: 'Cormorant Garamond', serif;
+        --font-sans: 'Inter', sans-serif;
+      }
+      
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      
+      html {
+        font-family: var(--font-sans);
+        background: var(--color-primary);
+        color: var(--color-text);
+        scroll-behavior: smooth;
+      }
+      
+      body {
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-serif);
+        font-weight: 300;
+        line-height: 1.2;
+      }
+    </style>
+  </body>
+</html>

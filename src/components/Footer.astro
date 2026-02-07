@@ -1,0 +1,39 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container">
+    <p class="copyright">&copy; {currentYear} 7o9o. All rights reserved.</p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    padding: 3rem 2rem;
+    background: var(--color-primary);
+    border-top: 1px solid rgba(201, 169, 97, 0.1);
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .copyright {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    font-weight: 300;
+  }
+  
+  @media (max-width: 768px) {
+    .footer {
+      padding: 2rem 1.5rem;
+    }
+    
+    .copyright {
+      font-size: 0.85rem;
+    }
+  }
+</style>
